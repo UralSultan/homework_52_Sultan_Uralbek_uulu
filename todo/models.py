@@ -9,7 +9,7 @@ STATUS_CHOICES = [
 class Task(models.Model):
     description = models.TextField('Description')
     status = models.CharField('Status', max_length=20, choices=STATUS_CHOICES, default='new')
-    due_date = models.DateField('Due Date')
+    due_date = models.DateField('Due Date', blank=True, null=True)
 
     class Meta:
         ordering = ['due_date', 'id']
