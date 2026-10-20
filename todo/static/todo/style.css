@@ -1,0 +1,33 @@
+body {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #222;
+}
+
+header {
+    margin-bottom: 24px;
+}
+
+.task-list li {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+textarea, select, input, button {
+    padding: 6px;
+    font: inherit;
+}
+
+textarea {
+    width: 400px;
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
