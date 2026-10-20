@@ -18,6 +18,10 @@
                 {% else %}
                     Дата выполнения не указана
                 {% endif %}
+                <form method="post" action="{% url 'task_delete' task.id %}">
+                    {% csrf_token %}
+                    <button type="submit">Удалить</button>
+                </form>
             </li>
         {% endfor %}
     </ul>

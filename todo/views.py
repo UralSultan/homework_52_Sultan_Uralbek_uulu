@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Task, STATUS_CHOICES
 
 def task_list(request):
@@ -15,3 +15,9 @@ def task_add(request):
         return redirect('task_list')
 
     return render(request, 'todo/task_form.html', {'status_choices': STATUS_CHOICES})
+
+def task_delete(request, task_id):
+    if request.method == 'POST':
+        task = get_object_or_404(Task, id=task_id)
+        task.delete()
+    return redirect('task_list')
