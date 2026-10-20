@@ -4,6 +4,9 @@
 
 {% block content %}
 <h1>Список задач</h1>
+<p><a href="{% url 'task_add' %}">Добавить задачу</a></p>
+
+<h1>Список задач</h1>
 {% if tasks %}
     <ul class="task-list">
         {% for task in tasks %}
