@@ -11,6 +11,7 @@ def task_add(request):
             description=request.POST.get('description', ''),
             status=request.POST.get('status', 'new'),
             due_date=request.POST.get('due_date') or None,
+            detail_descriptions=request.POST.get('details') or None,
         )
         return redirect('task_list')
 

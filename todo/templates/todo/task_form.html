@@ -3,13 +3,18 @@
 {% block title %}Добавить задачу{% endblock %}
 
 {% block content %}
-<h1>Добавить задачу</h1>
+<h1 xmlns="http://www.w3.org/1999/html">Добавить задачу</h1>
 <form method="post">
     {% csrf_token %}
 
     <p>
         <label for="description">Описание:</label><br>
         <textarea id="description" name="description" rows="4" required></textarea>
+    </p>
+
+    <p>
+        <label for="detail_descriptions">Детальное описание:</label><br>
+        <textarea id="detail_descriptions" name="detail_descriptions" rows="4"></textarea>
     </p>
 
     <p>
