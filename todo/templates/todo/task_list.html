@@ -11,7 +11,7 @@
     <ul class="task-list">
         {% for task in tasks %}
             <li>
-                <strong>{{ task.description }}</strong><br>
+                <strong><a href="{% url 'task_detail' task.id %}">{{ task.description }}</a></strong><br>
                 Статус: {{ task.get_status_display }}<br>
                 {% if task.due_date %}
                     Выполнить до: {{ task.due_date|date:'d.m.Y' }}
