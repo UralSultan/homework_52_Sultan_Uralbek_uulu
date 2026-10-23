@@ -13,7 +13,7 @@
 
 {% if task.detail_descriptions %}
     <h2>Детальное описание</h2>
-    <p>{{ task.detail_descriptions|linebreaksbr }}</p>
+    <pre style="white-space: pre-wrap;">{{ task.detail_descriptions }}</pre>
 {% else %}
     <p>Детальное описание не указано.</p>
 {% endif %}
